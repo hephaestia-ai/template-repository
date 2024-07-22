@@ -31,7 +31,6 @@ ecdsa==0.19.0
 esptool==4.7.0
 executing==2.0.1
 fastjsonschema==2.20.0
-file-management==1.0.8
 filelock==3.15.1
 Flask==3.0.3
 google-api-core==2.19.1
