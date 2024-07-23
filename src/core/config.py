@@ -1,5 +1,5 @@
 import os
-import google.auth 
+import google.auth # type: ignore
 from google.cloud import bigquery
 from openai import OpenAI
 
