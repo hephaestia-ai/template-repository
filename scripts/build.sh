@@ -11,7 +11,7 @@ error() {
     if [[ -z $1 ]]; then
         echo "Error: No argument provided. Usage: $0 <argument>"
     exit 1
-fi
+    fi
 }
 
 build() {
