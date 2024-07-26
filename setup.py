@@ -12,7 +12,7 @@ def read_requirements():
     return []
 
 setup(
-    name="cowgirl-ai-core",
+    name="cowgirl-ai-template",
     version="0.0.1",
     description="Cowgirl AI - Core Assistant",
     long_description=open("README.md").read(),
@@ -27,7 +27,7 @@ setup(
     python_requires=">=3.10",
     entry_points={
         "console_scripts": [
-            "cowgirl-ai=cli.cli:run",
+            "cowgirl-ai-template=cli.main:main",
         ],
     },
     include_package_data=True,
