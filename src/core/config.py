@@ -19,8 +19,23 @@ class ConfigOpenAI:
     """
     def __init__(self):
         self.open_ai_api_key = os.getenv('OPENAI_API_KEY')
+
+class AssistantClient(ConfigOpenAI):
+    """
+    Assistant Client 
+    ----------------
+    Initializes client object for making API requests.
+
+    Passes Open AI API key to the API endpoint, initializing the client for use.
+    """
+
+    def __init__(self):
+        super().__init__()  # Parent ConfigOpenAI class contains the API key processing
         self.client = OpenAI(api_key=self.open_ai_api_key)
+        self.assistant_id = None
+        self.thread = self.client.beta.threads.create()
+
 
 if __name__=="__main__":
-    ConfigBigQuery()
-    ConfigOpenAI()
+    AssistantClient()
+    
